@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: local
+cf:
+  apiHost:  api.run.pivotal.io
+  username:  
+  password: 
+  organization: 
+  space: development
+cb:
+  cache: cfapps-cache
+  bucket: cfapps-bucket
+  username: Administrator
+  password: 
+  expirationInMillis: "10000"
