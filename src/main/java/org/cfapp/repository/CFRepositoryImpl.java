@@ -1,9 +1,10 @@
-package com.comcast.repository;
+package org.cfapp.repository;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.cfapp.model.CFApplication;
 import org.cloudfoundry.operations.CloudFoundryOperations;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,8 +14,6 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
-
-import com.comcast.model.CFApplication;
 
 /*
  * This repository is used to,
@@ -33,7 +32,7 @@ public class CFRepositoryImpl implements CFRepository {
 	/*
 	 * This method calls an internal method to grab all applications running in cloud foundry and than filters the 
 	 * application using "id" passed as parameter.
-	 * @see com.comcast.repository.CFRepository#getApplicationById(java.lang.String)
+	 * @see org.cfapp.repository.CFRepository#getApplicationById(java.lang.String)
 	 */
 	@Override
 	@Cacheable("cfapps-cache")
@@ -46,7 +45,7 @@ public class CFRepositoryImpl implements CFRepository {
 	/*
 	 * This method calls an internal method to grab all applications running in cloud foundry and than filters the
 	 * application using "name" passed as parameter.
-	 * @see com.comcast.repository.CFRepository#getApplicationByName(java.lang.String)
+	 * @see org.cfapp.repository.CFRepository#getApplicationByName(java.lang.String)
 	 */
 	@Override
 	public CFApplication getApplicationByName(String name) {
@@ -74,7 +73,7 @@ public class CFRepositoryImpl implements CFRepository {
 
 	/*
 	 * This method deletes an entry from Cache (Couchbase)
-	 * @see com.comcast.repository.CFRepository#deleteById(java.lang.String)
+	 * @see org.cfapp.repository.CFRepository#deleteById(java.lang.String)
 	 */
 	@Override
 	@CacheEvict("cfapps-cache")
@@ -84,7 +83,7 @@ public class CFRepositoryImpl implements CFRepository {
 
 	/*
 	 * This method deletes all entries from Cache (Couchbase)
-	 * @see com.comcast.repository.CFRepository#deleteAll()
+	 * @see org.cfapp.repository.CFRepository#deleteAll()
 	 */
 	@Override
 	@CacheEvict(cacheNames="cfapps-cache", allEntries=true)

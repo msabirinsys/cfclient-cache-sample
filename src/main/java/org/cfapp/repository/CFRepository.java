@@ -1,6 +1,6 @@
-package com.comcast.repository;
+package org.cfapp.repository;
 
-import com.comcast.model.CFApplication;
+import org.cfapp.model.CFApplication;
 
 public interface CFRepository {
 	CFApplication getApplicationById(String id);

@@ -1,4 +1,4 @@
-package com.comcast.config;
+package org.cfapp.config;
 
 import java.util.HashMap;
 import java.util.Map;

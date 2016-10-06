@@ -1,15 +1,14 @@
-package com.comcast.service;
+package org.cfapp.service;
 
 import java.util.Optional;
 
+import org.cfapp.model.CFApplication;
+import org.cfapp.repository.CFRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
-
-import com.comcast.model.CFApplication;
-import com.comcast.repository.CFRepository;
 
 @Service
 public class CFApplicationServiceImpl implements CFApplicationService {	

@@ -1,7 +1,11 @@
-package com.comcast.controller;
+package org.cfapp.controller;
 
 import java.util.Optional;
 
+import org.cfapp.model.CFApplication;
+import org.cfapp.model.JsonMessage;
+import org.cfapp.model.TextMessage;
+import org.cfapp.service.CFApplicationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +16,6 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.comcast.model.CFApplication;
-import com.comcast.model.JsonMessage;
-import com.comcast.model.TextMessage;
-import com.comcast.service.CFApplicationService;
 
 /*
  * This controller has somewhat confusing endpoints. Below is what it does.

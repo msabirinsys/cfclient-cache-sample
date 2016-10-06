@@ -1,4 +1,4 @@
-package com.comcast.model;
+package org.cfapp.model;
 
 public interface JsonMessage {
 

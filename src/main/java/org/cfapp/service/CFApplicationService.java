@@ -1,8 +1,8 @@
-package com.comcast.service;
+package org.cfapp.service;
 
 import java.util.Optional;
 
-import com.comcast.model.CFApplication;
+import org.cfapp.model.CFApplication;
 
 public interface CFApplicationService {
 	Optional<CFApplication> getApplicationById(String id);

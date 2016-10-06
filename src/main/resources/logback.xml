@@ -7,7 +7,7 @@
 			</Pattern>
 		</layout>
 	</appender>
-	<logger name="com.comcast" level="debug" additivity="false">
+	<logger name="org.cfapp" level="debug" additivity="false">
 		<appender-ref ref="STDOUT" />
 	</logger>
 	<root level="error">
